@@ -5,8 +5,9 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "Projects", href: "#projects" },
   { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" }
 ];
 
@@ -41,7 +42,7 @@ export default function Header() {
   return (
     <header className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+      scrolled ? "bg-background/95 backdrop-blur-md border-b border-border py-4" : "bg-transparent py-6"
     )}>
       <div className="container-custom flex items-center justify-between">
         <Motion 
@@ -49,7 +50,9 @@ export default function Header() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="#home" className="text-2xl font-bold text-gradient">Portfolio</a>
+          <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Mutua.made
+          </a>
         </Motion>
         
         <nav>

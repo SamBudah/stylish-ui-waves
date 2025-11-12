@@ -1,105 +1,113 @@
 
 import { Motion } from "@/components/ui/Motion";
-import { 
-  Layout, Code, PenTool, Palette, 
-  Smartphone, FileStack, Zap 
-} from "lucide-react";
+import { Code2, Palette, Shield, Database } from "lucide-react";
 
-const skills = [
+const highlights = [
   {
-    icon: <Layout className="h-5 w-5" />,
-    title: "UI Design",
-    description: "Creating visual elements and layouts that enhance user experience"
+    icon: <Database className="h-6 w-6" />,
+    title: "Data Analysis",
+    description: "Transform complex data into actionable insights"
   },
   {
-    icon: <Code className="h-5 w-5" />,
-    title: "Frontend Development",
-    description: "Implementing designs with clean, semantic HTML, CSS, and JavaScript"
+    icon: <Palette className="h-6 w-6" />,
+    title: "UI/UX Design",
+    description: "Create intuitive and beautiful user experiences"
   },
   {
-    icon: <PenTool className="h-5 w-5" />,
-    title: "Interaction Design",
-    description: "Designing intuitive interactions and animations"
+    icon: <Code2 className="h-6 w-6" />,
+    title: "Development",
+    description: "Build robust applications with Python, Flutter, PHP"
   },
   {
-    icon: <Palette className="h-5 w-5" />,
-    title: "Visual Design",
-    description: "Creating aesthetically pleasing and consistent visual languages"
-  },
-  {
-    icon: <Smartphone className="h-5 w-5" />,
-    title: "Responsive Design",
-    description: "Designing interfaces that work seamlessly across all devices"
-  },
-  {
-    icon: <FileStack className="h-5 w-5" />,
-    title: "Design Systems",
-    description: "Building scalable and consistent design systems"
-  },
-  {
-    icon: <Zap className="h-5 w-5" />,
-    title: "Animation",
-    description: "Creating meaningful animations that enhance user experience"
+    icon: <Shield className="h-6 w-6" />,
+    title: "Cybersecurity",
+    description: "Ensure digital safety and data protection"
   }
 ];
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20">
-      <div className="container-custom">
+    <section id="about" className="py-24 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
+      
+      <div className="container-custom relative z-10">
+        <Motion
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              About Me
+            </span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+        </Motion>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <Motion
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5 }}
-            className="relative"
+            transition={{ duration: 0.6 }}
+            className="relative order-2 lg:order-1"
           >
-            <div className="aspect-square max-w-md mx-auto lg:mx-0 relative">
+            <div className="relative">
               <Motion
-                initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="absolute inset-0 rounded-2xl bg-accent/10 transform"
-              />
-              <Motion
-                initial={{ opacity: 0, scale: 0.9, rotate: 5 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="absolute inset-0 rounded-2xl bg-primary/10 transform translate-x-4 translate-y-4"
-              />
-              <Motion
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="relative w-full h-full rounded-2xl overflow-hidden"
+                animate={{ 
+                  rotate: [0, 5, 0, -5, 0],
+                  scale: [1, 1.02, 1]
+                }}
+                transition={{ 
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="aspect-square max-w-md mx-auto rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 p-1"
               >
-                <div className="w-full h-full bg-gradient-to-br from-accent/80 to-primary/50 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <h3 className="text-5xl font-bold mb-4">5+</h3>
-                    <p className="text-white/90 text-lg">Years of Experience</p>
+                <div className="w-full h-full rounded-3xl bg-card border border-border flex items-center justify-center overflow-hidden backdrop-blur-sm">
+                  <div className="text-center p-8">
+                    <div className="text-7xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent mb-4">
+                      SM
+                    </div>
+                    <p className="text-muted-foreground text-sm">Samson Maithya</p>
+                    <p className="text-primary font-semibold mt-1">Mutua.made</p>
                   </div>
                 </div>
               </Motion>
+              
+              {/* Decorative elements */}
+              <Motion
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -top-4 -left-4 w-24 h-24 border-4 border-primary/30 rounded-full"
+              />
+              <Motion
+                animate={{ rotate: -360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                className="absolute -bottom-4 -right-4 w-32 h-32 border-4 border-accent/30 rounded-2xl"
+              />
             </div>
           </Motion>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 order-1 lg:order-2">
             <Motion
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
             >
-              <h2 className="section-title">About Me</h2>
-              <p className="text-muted-foreground mt-4">
-                I'm a passionate UI Designer focused on creating beautiful and functional interfaces that solve real problems. With over 5 years of experience, I blend aesthetics with usability to deliver exceptional user experiences.
+              <p className="text-foreground text-lg leading-relaxed">
+                I'm a <span className="text-primary font-semibold">creative technologist</span> passionate about bridging design, analytics, and development. My journey combines technical precision with artistic creativity to deliver elegant digital solutions.
               </p>
-              <p className="text-muted-foreground mt-4">
-                My design process is collaborative and iterative, ensuring that the final product is not just visually appealing but also meets business goals and user needs.
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                With expertise spanning <span className="text-accent">Python, Flutter, PHP, and Firebase</span>, alongside a strong foundation in UI/UX design and cybersecurity, I transform complex challenges into intuitive, secure, and beautiful experiences.
+              </p>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Whether it's analyzing data patterns, designing pixel-perfect interfaces, building scalable applications, or securing digital assets — I bring a holistic approach to every project.
               </p>
             </Motion>
             
@@ -107,27 +115,25 @@ export default function AboutSection() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-8"
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-4"
             >
-              <h3 className="text-xl font-semibold mb-6">My Skills & Expertise</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {skills.map((skill, index) => (
+                {highlights.map((item, index) => (
                   <Motion
-                    key={skill.title}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    key={item.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.1 * index }}
-                    className="flex items-start gap-3 p-4 rounded-lg hover:bg-secondary/50 transition-colors"
+                    whileHover={{ scale: 1.05, boxShadow: "var(--shadow-glow)" }}
+                    className="p-5 rounded-xl bg-card border border-border hover:border-primary transition-all duration-300"
                   >
-                    <div className="p-2 rounded-md bg-accent/10 text-accent">
-                      {skill.icon}
+                    <div className="p-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 text-primary w-fit mb-3">
+                      {item.icon}
                     </div>
-                    <div>
-                      <h4 className="font-medium">{skill.title}</h4>
-                      <p className="text-sm text-muted-foreground mt-1">{skill.description}</p>
-                    </div>
+                    <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
                   </Motion>
                 ))}
               </div>
