@@ -104,7 +104,7 @@ export default function AboutSection() {
                 I'm a <span className="text-primary font-semibold">creative technologist</span> passionate about bridging design, analytics, and development. My journey combines technical precision with artistic creativity to deliver elegant digital solutions.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                With expertise spanning <span className="text-accent">Python, Flutter, PHP, and Firebase</span>, alongside a strong foundation in UI/UX design and cybersecurity, I transform complex challenges into intuitive, secure, and beautiful experiences.
+                With expertise spanning <span className="text-accent">Python, Flutter, PHP, Firebase, and MySQL</span>, alongside a strong foundation in UI/UX design and cybersecurity, I transform complex challenges into intuitive, secure, and beautiful experiences.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Whether it's analyzing data patterns, designing pixel-perfect interfaces, building scalable applications, or securing digital assets — I bring a holistic approach to every project.

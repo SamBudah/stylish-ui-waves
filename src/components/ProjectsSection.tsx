@@ -8,51 +8,66 @@ const categories = ["All", "Data", "Design", "Development", "Cybersecurity"];
 const projects = [
   {
     id: 1,
-    title: "Data Analytics Dashboard",
-    category: "Data",
-    description: "Interactive dashboard for real-time data visualization and insights using Python and modern analytics frameworks.",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-    tags: ["Python", "Data Viz", "Analytics"]
+    title: "Flipstore MVP",
+    category: "Development",
+    description: "Flutter e-commerce app with Firebase backend, featuring user authentication, product catalog, shopping cart, and secure checkout.",
+    imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
+    tags: ["Flutter", "Firebase", "E-commerce"],
+    githubUrl: "https://github.com/SamBudah/"
   },
   {
     id: 2,
-    title: "Mobile Banking App",
+    title: "Transport Company Computerization System",
     category: "Development",
-    description: "Secure cross-platform banking application built with Flutter, featuring biometric authentication and real-time transactions.",
-    imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
-    tags: ["Flutter", "Firebase", "UI/UX"]
+    description: "Comprehensive transport management system with Flutter frontend and Firebase backend for fleet management, route optimization, and real-time tracking.",
+    imageUrl: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957",
+    tags: ["Flutter", "Firebase", "Management"],
+    githubUrl: "https://github.com/SamBudah/"
   },
   {
     id: 3,
-    title: "Brand Identity System",
-    category: "Design",
-    description: "Complete brand identity and design system for a tech startup, including logo, color palette, and component library.",
-    imageUrl: "https://images.unsplash.com/photo-1561070791-2526d30994b5",
-    tags: ["Figma", "Branding", "Design System"]
+    title: "Inventory Management System",
+    category: "Development",
+    description: "PHP & MySQL web application with role-based access, real-time inventory tracking, analytics dashboard, and CSV/PDF export functionality.",
+    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
+    tags: ["PHP", "MySQL", "Analytics"],
+    githubUrl: "https://github.com/SamBudah/"
   },
   {
     id: 4,
-    title: "Security Audit Platform",
-    category: "Cybersecurity",
-    description: "Comprehensive security audit tool for web applications with vulnerability scanning and threat assessment capabilities.",
-    imageUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
-    tags: ["Security", "PHP", "MySQL"]
+    title: "Customer Segmentation for E-commerce",
+    category: "Data",
+    description: "Python machine learning model using K-Means clustering and Random Forest to segment customers and predict purchasing behavior patterns.",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    tags: ["Python", "ML", "Data Science"],
+    githubUrl: "https://github.com/SamBudah/"
   },
   {
     id: 5,
-    title: "E-commerce Platform",
+    title: "Flight Carbon Emissions Calculator",
     category: "Development",
-    description: "Full-stack e-commerce solution with payment integration, inventory management, and analytics dashboard.",
-    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    tags: ["PHP", "MySQL", "APIs"]
+    description: "Flask-based web application for calculating and tracking CO₂ emissions from flights, promoting environmental awareness and sustainability.",
+    imageUrl: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05",
+    tags: ["Flask", "Python", "Environment"],
+    githubUrl: "https://github.com/SamBudah/"
   },
   {
     id: 6,
-    title: "UX Research Study",
+    title: "Community Security App",
+    category: "Cybersecurity",
+    description: "Flutter mobile app enabling community-police coordination for incident reporting, real-time alerts, and neighborhood safety management.",
+    imageUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981c",
+    tags: ["Flutter", "Security", "Firebase"],
+    githubUrl: "https://github.com/SamBudah/"
+  },
+  {
+    id: 7,
+    title: "Mutua.made Portfolio",
     category: "Design",
-    description: "In-depth user experience research and usability testing for improving mobile app engagement and retention.",
-    imageUrl: "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c",
-    tags: ["UX Research", "Prototyping", "Testing"]
+    description: "Personal portfolio website showcasing creative and technical projects with modern design, smooth animations, and responsive layout.",
+    imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8",
+    tags: ["React", "UI/UX", "Design"],
+    githubUrl: "https://github.com/SamBudah/"
   }
 ];
 
@@ -166,10 +181,15 @@ export default function ProjectsSection() {
                 className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-transparent flex items-end justify-center pb-8 pointer-events-none"
               >
                 <div className="flex gap-3 pointer-events-auto">
-                  <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium flex items-center gap-2 hover:shadow-lg transition-all">
+                  <a 
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-medium flex items-center gap-2 hover:shadow-lg transition-all"
+                  >
                     <ExternalLink className="h-4 w-4" />
-                    View
-                  </button>
+                    View on GitHub
+                  </a>
                 </div>
               </Motion>
             </Motion>

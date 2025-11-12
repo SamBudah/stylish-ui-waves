@@ -53,10 +53,10 @@ const skillCategories = [
 
 const tools = [
   { name: "Figma", icon: <Figma className="h-8 w-8" /> },
-  { name: "VS Code", icon: <FileCode className="h-8 w-8" /> },
-  { name: "Firebase", icon: <Cloud className="h-8 w-8" /> },
   { name: "Git", icon: <Code2 className="h-8 w-8" /> },
+  { name: "Firebase", icon: <Cloud className="h-8 w-8" /> },
   { name: "MySQL", icon: <Database className="h-8 w-8" /> },
+  { name: "Linux", icon: <FileCode className="h-8 w-8" /> },
   { name: "Security Tools", icon: <Lock className="h-8 w-8" /> }
 ];
 
