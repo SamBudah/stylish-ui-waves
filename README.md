@@ -1,73 +1,40 @@
-# Welcome to your Lovable project
+# Project: Stylish UI Waves 🌊
 
-## Project info
+This repository contains the source code for a modern, component-driven web application.
 
-**URL**: https://lovable.dev/projects/d4dde381-3bb3-45ed-984d-4c138d95d051
+## 🚀 Live Demonstration
 
-## How can I edit this code?
+The application is deployed and publicly accessible via GitHub Pages:
 
-There are several ways of editing your application.
+**Deployed URL:** [https://sambudah.github.io/stylish-ui-waves/](https://sambudah.github.io/stylish-ui-waves/)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d4dde381-3bb3-45ed-984d-4c138d95d051) and start prompting.
+## Technology Stack ⚙️
 
-Changes made via Lovable will be committed automatically to this repo.
+This project is built using a highly efficient and contemporary collection of front-end tools:
 
-**Use your preferred IDE**
+* **Build Tool:** **Vite** (Next-generation frontend tooling for rapid development and bundling.)
+* **Language:** **TypeScript** (Enhances code quality and maintainability with strong typing.)
+* **Core Library:** **React** (For building a performant and modular user interface.)
+* **Styling:** **Tailwind CSS** (A utility-first CSS framework for rapid and custom design implementation.)
+* **Components:** **shadcn-ui** (A collection of accessible and customizable React components, styled with Tailwind CSS.)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Development Setup
 
-Follow these steps:
+To set up the development environment locally, ensure you have Node.js and npm installed.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository
+git clone <https://sambudah.github.io/stylish-ui-waves>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd <stylish-ui-waves>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Step 3: Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d4dde381-3bb3-45ed-984d-4c138d95d051) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
