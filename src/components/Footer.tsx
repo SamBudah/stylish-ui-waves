@@ -33,27 +33,35 @@ export default function Footer() {
           
           {/* Quick Links */}
           <Motion
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <div>
-              <h5 className="font-semibold text-foreground mb-4">Quick Links</h5>
-              <ul className="space-y-2">
-                {["Home", "About", "Projects", "Skills", "Contact"].map((link) => (
-                  <li key={link}>
-                    <a 
-                      href={`#${link.toLowerCase()}`} 
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Motion>
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: 0.1 }}
+>
+  <div>
+    <h5 className="font-semibold text-foreground mb-4">Quick Links</h5>
+    <ul className="space-y-2">
+      {["Home", "About", "Projects", "Skills", "Contact"].map((link) => {
+        const href = `#${link.toLowerCase()}`;
+        return (
+          <li key={link}>
+            <a
+              href={href}
+              onClick={(e) => {
+                e.preventDefault();
+                const section = document.querySelector(href);
+                if (section) section.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
+              {link}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </div>
+</Motion>
           
           {/* Social & Contact */}
           <Motion
@@ -78,7 +86,7 @@ export default function Footer() {
                 </Motion>
                 <Motion whileHover={{ scale: 1.1, y: -2 }} whileTap={{ scale: 0.95 }}>
                   <a 
-                    href="https://linkedin.com/in/samsonmaithya" 
+                    href="https://linkedin.com/in/samson-mutua-rcks" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 rounded-xl bg-card hover:bg-primary/20 text-foreground hover:text-primary transition-all border border-border hover:border-primary"
@@ -89,7 +97,7 @@ export default function Footer() {
                 </Motion>
                 <Motion whileHover={{ scale: 1.1, y: -2 }} whileTap={{ scale: 0.95 }}>
                   <a 
-                    href="mailto:contact@mutuamade.com"
+                    href="mailto:samutua17@gmail.com"
                     className="p-3 rounded-xl bg-card hover:bg-primary/20 text-foreground hover:text-primary transition-all border border-border hover:border-primary"
                     aria-label="Email"
                   >

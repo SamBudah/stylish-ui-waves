@@ -8,14 +8,50 @@ const categories = ["All", "Data", "Design", "Development", "Cybersecurity"];
 const projects = [
   {
     id: 1,
-    title: "Flipstore MVP",
+    title: "Website Whether Words",
     category: "Development",
-    description: "Flutter e-commerce app with Firebase backend, featuring user authentication, product catalog, shopping cart, and secure checkout.",
+    description: "A web application built to explore weather-related word insights and visualizations. [Replace with actual details from the repo]",
     imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
-    tags: ["Flutter", "Firebase", "E-commerce"],
-    githubUrl: "https://github.com/SamBudah/"
+    tags: ["HTML", "JavaScript", "API"],
+    githubUrl: "https://github.com/SamBudah/website-whether-words"
   },
   {
+    id: 2,
+    title: "QuoteApp",
+    category: "Development",
+    description: "A mobile or web app to deliver and manage quotes (view, save, share). [Replace with actual details]",
+    imageUrl: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957",
+    tags: ["Android", "Kotlin", "Quotes"],
+    githubUrl: "https://github.com/SamBudah/QuoteApp"
+  },
+  {
+    id: 3,
+    title: "Streamlit Customer Segmentation",
+    category: "Data",
+    description: "A data science project using Streamlit to segment e-commerce customers, with visualizations and interactive dashboard. [Replace with actual details]",
+    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
+    tags: ["Python", "Streamlit", "ML"],
+    githubUrl: "https://github.com/SamBudah/streamlit-customer_segmentation"
+  },
+  {
+    id: 4,
+    title: "Arduino Bluetooth Security System",
+    category: "Cybersecurity",
+    description: "An Arduino-based hardware project integrating Bluetooth for security system implementation. [Replace with actual details]",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    tags: ["Arduino", "Bluetooth", "Embedded"],
+    githubUrl: "https://github.com/SamBudah/Arduino_Bluetooth_SecuritySystem"
+  },
+  {
+    id: 5,
+    title: "ResTop Analytics",
+    category: "Data",
+    description: "A restaurant or hospitality analytics system named ResTop Analytics for tracking/reservations/insights. [Replace with actual details]",
+    imageUrl: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05",
+    tags: ["Analytics", "Dashboard", "MySQL"],
+    githubUrl: "https://github.com/SamBudah/ResTopAnalytics"
+  },
+  /* {
     id: 2,
     title: "Transport Company Computerization System",
     category: "Development",
@@ -32,7 +68,7 @@ const projects = [
     imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
     tags: ["PHP", "MySQL", "Analytics"],
     githubUrl: "https://github.com/SamBudah/"
-  },
+  }, */
   {
     id: 4,
     title: "Customer Segmentation for E-commerce",
@@ -42,7 +78,7 @@ const projects = [
     tags: ["Python", "ML", "Data Science"],
     githubUrl: "https://github.com/SamBudah/"
   },
-  {
+  /* {
     id: 5,
     title: "Flight Carbon Emissions Calculator",
     category: "Development",
@@ -68,7 +104,7 @@ const projects = [
     imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8",
     tags: ["React", "UI/UX", "Design"],
     githubUrl: "https://github.com/SamBudah/"
-  }
+  } */
 ];
 
 export default function ProjectsSection() {

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Motion } from "@/components/ui/Motion";
 import { cn } from "@/lib/utils";
@@ -15,55 +14,69 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
+  // Track scroll to highlight active section
   useEffect(() => {
     const handleScroll = () => {
-      // Check if page is scrolled
       setScrolled(window.scrollY > 20);
-      
-      // Determine active section
+
       const sections = navItems.map(item => item.href.substring(1));
       const currentSection = sections.find(section => {
         const element = document.getElementById(section);
         if (!element) return false;
-        
+
         const rect = element.getBoundingClientRect();
         return rect.top <= 100 && rect.bottom >= 100;
       });
-      
+
       if (currentSection) {
         setActiveSection(currentSection);
       }
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Scroll to section smoothly when nav link is clicked
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const section = document.querySelector(href);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled ? "bg-background/95 backdrop-blur-md border-b border-border py-4" : "bg-transparent py-6"
-    )}>
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        scrolled ? "bg-background/95 backdrop-blur-md border-b border-border py-4" : "bg-transparent py-6"
+      )}
+    >
       <div className="container-custom flex items-center justify-between">
-        <Motion 
+        <Motion
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="#home" className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <a
+            href="#home"
+            onClick={(e) => handleNavClick(e, "#home")}
+            className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+          >
             Mutua.made
           </a>
         </Motion>
-        
+
         <nav>
-          <Motion 
+          <Motion
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, staggerChildren: 0.1, delayChildren: 0.2 }}
             className="flex items-center gap-8"
           >
             {navItems.map((item, index) => (
-              <Motion 
+              <Motion
                 key={item.name}
                 custom={index}
                 initial={{ y: -10, opacity: 0 }}
@@ -71,8 +84,9 @@ export default function Header() {
                 transition={{ delay: 0.1 * index }}
                 className="relative"
               >
-                <a 
-                  href={item.href} 
+                <a
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={cn(
                     "text-base font-medium transition-colors hover:text-accent",
                     activeSection === item.href.substring(1) ? "text-accent" : "text-foreground"
@@ -80,7 +94,7 @@ export default function Header() {
                 >
                   {item.name}
                   {activeSection === item.href.substring(1) && (
-                    <Motion 
+                    <Motion
                       layoutId="activeSection"
                       className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent rounded-full"
                     />

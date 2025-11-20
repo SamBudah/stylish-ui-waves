@@ -73,7 +73,7 @@ export default function AboutSection() {
                     <div className="text-7xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent mb-4">
                       SM
                     </div>
-                    <p className="text-muted-foreground text-sm">Samson Maithya</p>
+                    <p className="text-muted-foreground text-sm">Samson Mutua</p>
                     <p className="text-primary font-semibold mt-1">Mutua.made</p>
                   </div>
                 </div>
