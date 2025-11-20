@@ -1,6 +1,7 @@
-
 import { Motion } from "@/components/ui/Motion";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Code2, Palette, Shield, Database } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const highlights = [
   {
@@ -68,14 +69,17 @@ export default function AboutSection() {
                 }}
                 className="aspect-square max-w-md mx-auto rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 p-1"
               >
-                <div className="w-full h-full rounded-3xl bg-card border border-border flex items-center justify-center overflow-hidden backdrop-blur-sm">
-                  <div className="text-center p-8">
-                    <div className="text-7xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent mb-4">
+                <div className="w-full h-full rounded-3xl bg-card border border-border flex items-center justify-center overflow-hidden">
+                  <Avatar className="w-full h-full rounded-3xl">
+                    <AvatarImage 
+                      src={profilePhoto} 
+                      alt="Samson Maithya - Mutua.made" 
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="text-7xl font-bold bg-gradient-to-br from-primary to-accent">
                       SM
-                    </div>
-                    <p className="text-muted-foreground text-sm">Samson Maithya</p>
-                    <p className="text-primary font-semibold mt-1">Mutua.made</p>
-                  </div>
+                    </AvatarFallback>
+                  </Avatar>
                 </div>
               </Motion>
               

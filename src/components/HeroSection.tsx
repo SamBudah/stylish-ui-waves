@@ -1,7 +1,9 @@
 
 import { Motion } from "@/components/ui/Motion";
 import { RevealText } from "@/components/ui/reveal-text";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Github, Mail } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 export default function HeroSection() {
   return (
@@ -125,20 +127,28 @@ export default function HeroSection() {
                 className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-2xl"
               />
               
-              <div className="relative w-full h-full bg-gradient-to-br from-card to-secondary/50 rounded-3xl border border-border flex items-center justify-center overflow-hidden backdrop-blur-sm">
+              <div className="relative w-full h-full rounded-3xl border border-border flex items-center justify-center overflow-hidden">
                 <Motion
                   animate={{ 
-                    y: [0, -10, 0],
-                    rotateY: [0, 10, 0, -10, 0]
+                    scale: [1, 1.02, 1],
                   }}
                   transition={{ 
                     repeat: Infinity, 
                     duration: 6,
                     ease: "easeInOut"
                   }}
-                  className="text-8xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent"
+                  className="w-full h-full"
                 >
-                  M
+                  <Avatar className="w-full h-full rounded-3xl">
+                    <AvatarImage 
+                      src={profilePhoto} 
+                      alt="Samson Maithya" 
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="text-8xl font-bold bg-gradient-to-br from-primary to-accent">
+                      SM
+                    </AvatarFallback>
+                  </Avatar>
                 </Motion>
               </div>
               
